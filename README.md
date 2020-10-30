@@ -52,9 +52,11 @@ Django version 3.1.2, using settings 'mysite.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CTRL-BREAK.
 ```
-现在，服务器正在运行，浏览器访问 https://127.0.0.1:8000/。你将会看到一个“祝贺”页面，随着一只火箭发射，服务器已经运行了。
+现在，服务器正在运行，浏览器访问 https://127.0.0.1:8000/。你将会看到一个"祝贺"页面，随着一只火箭发射，服务器已经运行了。
 
-![image-20201030100514022](assets/pic/image-20201030100514022.png)
+![image-20201030100514022](https://github.com/lihuafengzi/Django-votesite/raw/master/assets/pic/image-20201030100514022.png)
+
+> 图片在GitHub上无法显示, 将图片路径改为：https://github.com/lihuafengzi/Django-votesite/raw/master/+本地路径
 
 如果需要更换端口，则在后面加上端口
 ```bash
