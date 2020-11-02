@@ -8,11 +8,13 @@
 - 一个让人们查看和投票的公共站点
 - 一个让你能添加、修改和删除投票的管理站点
 
+完成本项目的目的，是为了学习Django。
+
 ## 技术说明
 
 前后端采用一体化的Python 3.7.9 + Django 3.1.2
 
-### 环境安装
+
 安装虚拟环境，指定Python版本和Django版本。
 ```bash
 conda create -n datavisual37 python=3.7.9 Django=3.1.2
@@ -54,9 +56,9 @@ Quit the server with CTRL-BREAK.
 ```
 现在，服务器正在运行，浏览器访问 https://127.0.0.1:8000/。你将会看到一个"祝贺"页面，随着一只火箭发射，服务器已经运行了。
 
-![image-20201030100514022](https://github.com/lihuafengzi/Django-votesite/raw/master/assets/pic/image-20201030100514022.png)
+![image-20201030100514022](assets/pic/image-20201030100514022.png)
 
-> 图片在GitHub上无法显示, 将图片路径改为：https://github.com/lihuafengzi/Django-votesite/raw/master/+本地路径
+> 图片在GitHub上无法显示
 
 如果需要更换端口，则在后面加上端口
 ```bash
@@ -70,21 +72,9 @@ python manage.py runserver 0:8000
 
 在修改项目的文件内容后，runserver会自动重新加载Python代码。只有在新加的文件的时候，才需要重启服务器。
 
-### 项目开发
+后续的项目细节，请移步：https://docs.djangoproject.com/zh-hans/3.1/contents/
 
-在 Django 中，每一个应用都是一个 Python 包，并且遵循着相同的约定。
-
-- 应用是一个专门做某件事的网络应用程序——比如博客系统，或者公共记录的数据库，或者小型的投票程序。
-- 项目则是一个网站使用的配置和应用的集合。项目可以包含很多个应用。应用可以被很多个项目使用。
-
-Django 自带一个工具，可以帮你生成应用的基础目录结构，这样你就能专心写代码，而不是创建目录了。
-
-我们将在你的 manage.py 同级目录下创建投票应用。这样它就可以作为顶级模块导入，而不是 mysite 的子模块。
-
-现在在manage.py的同级目录下，执行如下命令，创建应用。
-
-
-
+同时，我也在文档`doc/lesson-**.md`中记录了学习的过程。
 
 ---
 
