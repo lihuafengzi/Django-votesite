@@ -570,6 +570,52 @@ http://127.0.0.1:8000/polls/34/vote
 
 下面，我们将丰富`HttpResponse`对象的内容。
 
+编辑`polls/views.py`  
+```python
+from django.http import HttpResponse
+from .models import Question
+
+
+def index(request):
+    last_question_list = Question.objects.order_by('-pub_date')[:5]
+    ouput = ', '.join([q.question_text for q in last_question_list])
+    # return HttpResponse("hello world. You are at the polls index")
+    return HttpResponse(ouput)
+
+
+def detail(request, question_id):
+    return HttpResponse("You are looking at question %s." % question_id)
+
+
+def results(request, question_id):
+    response = "You are looking at the result of question %s."
+    return HttpResponse(response % question_id)
+
+
+def vote(request, question_id):
+    return HttpResponse("You're voting on question %s." % question_id)
+```
+
+这里面，index视图返回的HttpResponse对象已经与数据库进行交互了。
+
+现在再进入页面`http://127.0.0.1:8000/polls/`就可以看到前五个问题的清单了。
+
+#### 使用模板
+
+下面我们使用Django的模板，真正创建一个页面
+
+新建目录`polls/templates/`
+
+
+
+
+
+
+
+
+
+
+
 
 
 
